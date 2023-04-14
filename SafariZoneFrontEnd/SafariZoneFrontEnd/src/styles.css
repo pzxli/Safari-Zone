@@ -1,0 +1,132 @@
+/* You can add global styles to this file, and also import other style files */
+.palette {
+    color: #74b65b; /*light green*/
+    color: #3f7041; /*green*/
+    color: #ba7b36; /*dark orange*/
+    color: #fbe4b2; /*light cream*/
+    color: #f2c284; /*cream*/
+    color: #e0b507; /*yellow*/
+    color: #4a3218; /*dark brown*/
+    color: #675c62; /*warm gray*/
+    color: #dc4b16; /*red orange*/
+}
+
+.darktype-palette {
+    color: white;
+    color: #64905b; /*desaturated green*/
+    color: #535353; /*light gray*/
+    color: #2b2b2b; /*gray*/
+    color: #1b1b1b; /*dark gray*/
+    color: #203122; /*dark green 1*/
+    color: #152617; /*dark green 2*/
+    color: #102012; /*dark green 3*/
+    color: #0d1c0f; /*dark green 4*/
+}
+
+/* Flo's fancy buttons */
+.submit-button{
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    background-color: #e0b507;
+    color: white;
+    padding: 4px;
+    padding-right: 8px;
+    padding-left: 8px;
+    position: relative;
+    font-weight: bold;
+}
+
+.submit-button:hover{
+    background-color: #f0c61c;
+    bottom: 1px;
+    box-shadow: 0px 2px 1px #917608;
+    cursor: pointer;
+}
+
+.submit-button:active{
+    top: 1px;
+    background-color: #e0b507;
+    -webkit-box-shadow: inset 0px 0px 4px 2px rgba(0,0,0,.5);
+    -moz-box-shadow: inset 0px 0px 4px 2px rgba(0,0,0,.5);
+    box-shadow: inset 0px 0px 4px 2px rgba(0,0,0,.5);
+}
+
+/* example */
+.big-example {
+    font-size: 3vh;
+}
+
+.delete-button {
+    border: none;
+    background-color: #dc4b16;
+    position: relative;
+    border-radius: 10px;
+    color: white;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.delete-button:hover {
+    cursor: pointer;
+    background-color: #ea6130;
+}
+
+.delete-button:active {
+    background-color: #dc4b16;
+    transform: scale(.95);
+}
+
+
+.dark-type-button {
+    margin-left: 2vh;
+    background-color: rgb(68, 46, 14);
+    color: white;
+    padding: 2px;
+    padding-right: 12px;
+    padding-left: 12px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    font-size: 2vh;
+    cursor: pointer;
+}
+
+.dark-type-button:hover{
+    background-color: rgb(82, 57, 21);
+}
+
+.normal-type-button {
+    margin-left: 2vh;
+    background-color: rgb(148, 148, 148);
+    color: white;
+    padding: 2px;
+    padding-right: 12px;
+    padding-left: 12px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    font-size: 2vh;
+    cursor: pointer;
+}
+
+.normal-type-button:hover {
+    background-color: rgb(168, 168, 168);
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: none;
+    z-index: 9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #486249;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(89, 126, 91);
+}

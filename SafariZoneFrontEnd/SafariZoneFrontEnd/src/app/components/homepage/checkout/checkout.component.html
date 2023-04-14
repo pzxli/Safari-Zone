@@ -1,0 +1,38 @@
+<!-- <div><button (click)="confirmSubmit()">Checkout</button></div>
+<div *ngIf="confirm">
+    <div>Card Holder Name</div>
+    <input type="text" name="" id="" placeholder="Card Holder Name">
+    <div>Credit Card Number:</div>
+    <input type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" placeholder="Credit Card Number" maxlength="19">
+    <div>Expiration [MONTH/YYYY]</div>
+    <input class="inputCard" type="month" required/>
+    <button (click)="submitCart($event)">Are you Sure?</button>
+</div> -->
+
+<div class="message" [class.message-dark]="isDarkMode" *ngIf="nothingInCart">Nothing In cart.</div>
+<div class = "checkout-func">
+    <div class = "btn-container">
+        <button class="submit-button" (click)="confirmSubmit()">Checkout</button>
+        <div *ngIf="confirm"><button class = "submit-button" (click)="submitCart($event)">Confirm</button></div>
+    </div>
+</div>
+
+<div class="submit-animation" *ngIf="isSubmitted">
+    <div class="overlap">
+        <div class="pokeball-container">
+            <div class="poke-center">
+                <div class="pokeball">
+                    <div class="pokeball__button"></div>
+                </div>
+            </div>
+            <div class="success-container">
+                <span class="success-message"></span>
+            </div>
+            <div class="button-container">
+                <div class="submit-button" id="proceed-button"(click)="toggleAnimation()">
+                    PROCEED
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

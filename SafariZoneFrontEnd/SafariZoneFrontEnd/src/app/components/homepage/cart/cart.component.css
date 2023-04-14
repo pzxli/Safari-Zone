@@ -1,0 +1,316 @@
+.cart-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #fbe4b2;
+    margin: 2px;
+    width: fit-content;
+    height: 80%;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.cart-container-dark{
+    background-color: #474747;
+}
+
+.cart-title{
+    display: flex;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.cart-title-dark{
+    color: white;
+}
+
+.cart-total-dark{
+    color: white;
+}
+
+.product-container{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    height: 140px;
+    background-color: #fbe4b2;
+    margin-bottom: .5rem;
+    border: 2px solid #74b65b;  
+    background-color: #3f7041;
+    border-radius: 6px;
+}
+
+.product-container-dark{
+    box-shadow: 3px 3px 10px black;
+    border: 2px solid #535353;  
+    background-color: #102012;
+}
+
+.card-label{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    background-color: #74b65b;
+    display: flex;
+    justify-content: space-between;
+    width: 175px;
+    height: 10px;
+    padding: 10px;
+    margin-bottom: 2px;
+}
+
+.card-label-dark{
+    background-color: #535353;
+    color: white;
+}
+
+.product-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.img-container{
+    margin: 10px;
+    margin-top: 20px;
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    border-radius: 6px;
+    justify-content: center;
+    display: flex;
+}
+
+.info-container{
+    background-color: #74b65b;
+    margin-top: 0;
+    padding: 2px;
+    height: fit-content;
+}
+
+.info-container-dark{
+    background-color: #535353;
+    color: white;
+}
+
+.poke-nickname{
+    margin-left: 5px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.adoption-price{
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    height: fit-content;
+}
+
+.container-container {
+    width: 16vw;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 2%;
+    right: 0;
+}
+
+.total-text {
+    font-size: 2vh;
+    color: white;
+    text-align: center;
+}
+
+.checkout-container{
+    background-color: #74b65b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    border-radius: 12px;
+    border: 1px solid #3f7041;
+}
+
+.checkout-container-dark{
+    background-color: #102012;
+    border: 1px solid #74b65b;
+}
+
+
+.palette {
+    color: #74b65b;
+    color: #3f7041;
+    color: #ba7b36;
+    color: #fbe4b2;
+    color: #f2c284;
+    color: #fecd06;
+    color: #4a3218;
+    color: #675c62;
+}
+
+/* .checkout-button{
+
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    background-color: #e0b507;
+    padding: 4px;
+    padding-right: 8px;
+    padding-left: 8px;
+    position: relative;
+    font-weight: bold;
+} */
+
+
+/* .cart-container{
+    display: flex;
+    justify-content: center;
+    background-color: #fbe4b2;
+}
+.product-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.individual-product{
+    border: 2px solid #4a3218;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #74b65b;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 12px 12px 2px 1px #675c62;
+}
+
+.delete-button{
+    height: fit-content;
+    margin-top: 25px;
+}
+#cart-title{
+    display: flex;
+    justify-content: center;
+}
+#cart-total{
+    display: flex;
+    justify-content: center;
+    border: 2px solid #4a3218;
+    background-color: #74b65b;
+    border-radius: 10px;
+}
+#cart-total-literal{
+    margin-left: 5px;
+}
+.checkout{
+    display: flex;
+    justify-content: center;
+    border: 2px solid #4a3218;
+    background-color: #74b65b;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.checkout-button{
+    border-radius: 10px;
+    background-color: fecd06;
+}
+
+
+
+
+.cards{
+    
+    justify-content: space-evenly;
+
+}
+
+.product{
+    margin: 25px;
+    background-color: #3f7041;
+    height: 150px;
+    width: 200px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 10px #4a3218;
+    position: relative;
+    
+}
+
+.img-container{
+    background-color: white;
+    margin-top: 25px;
+    margin-left: 75px;
+    margin-bottom: 10px;
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    border-radius: 6px;
+    justify-content: center;
+    display: flex;
+    
+}
+
+.info-container{
+    background-color: #74b65b;
+    padding-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 250px;
+    border-radius: 6px;
+}
+
+.card-label{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    background-color: #74b65b;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.poke-nickname{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 20pt;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.stats{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+.adoption-price{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+
+.poke-description{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    background-color: rgba(229, 219, 219, 0.5);
+    height: 40px;
+    margin: 7px;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+#description-text{
+    padding: 5px
+}
+
+.delete-button{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+#shiny{
+    font-size: 20pt;
+} */

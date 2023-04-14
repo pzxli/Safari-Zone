@@ -1,0 +1,85 @@
+    <div class="nav-container">
+      <div class="nav-bar" [class.nav-bar-dark]="isDarkMode">
+          <img class="nav-logo" src="../../../../assets/images/PokeWhiteLogo.png">
+          <ul class="nav-item-list">
+              <li class="nav-item">
+                  <button class="nav-button" routerLink="/">Home</button>
+              </li>
+              <li class="nav-item">
+                <button class="dark-type-button" [class.normal-type-button]="isDarkMode" (click)="toggleDarkMode()">{{darkModeString}}</button>
+            </li>
+          </ul>
+      </div>
+    </div>
+  
+    <div class="container" [class.container-dark]="isDarkMode">
+      <div class="leftSide">
+        <div class="logoContainer">
+            <img class="logo" src="../../../../assets/images/Safari_Zone_Title (1).png">
+        </div>
+
+        <div class="imagesContainer">
+          <img class="image" src="../../../../assets/images/pokemon_portraits2.png">
+        </div>
+  
+      </div>
+  
+      <div class="rightSide">
+  
+        
+  
+        <div class="registerBox" [class.registerBox-dark]="isDarkMode">
+            <h2>Register</h2>
+  
+            <form id="register-form" ngNativeValidate>
+              <div class="inputBox">
+                <input [(ngModel)]="username" type="text" name="username" required id="usernameInput">
+                <label for="usernameInput">Username</label>
+              </div>
+          
+              <div class="inputBox">
+                <input [(ngModel)]="password" type="password" name="password" required id="passwordInput">
+                <label for="passwordInput">Password</label>
+              </div>
+          
+              <div class="inputBox">
+                <input [(ngModel)]="firstname" type="text" name="firstname" required id="fistnameInput">
+                <label for="firstnameInput">First Name</label>
+              </div>
+
+              <div class="inputBox">
+                <input [(ngModel)]="lastname" type="text" name="lastname" required id="lastnameInput">
+                <label for="lastnameInput">Last Name</label>
+              </div>
+
+              <div class="inputBox">
+                <input [(ngModel)]="email" type="text" name="email" required id="emailInput">
+                <label for="emailInput">Email Address</label>
+              </div>
+
+              <div class="inputBox">
+                <input [(ngModel)]="shipping" type="text" name="shipping" required id="addressInput">
+                <label for="addressInput">Shipping Address</label>
+              </div>
+
+              <div *ngIf="feedbackIsVisible" class="message" [class.message-dark]="isDarkMode">Username or Email already taken</div>
+          
+              <div class="registerFormBtns">
+                <input (click)="register()" type="submit" name="" value="Register" class="registerBtn" [class.registerBtn-dark]="isDarkMode">
+              </div>
+
+            <div class="linkContainer">
+              <a class="loginLink" routerLink="/" [class.loginLink-dark]="isDarkMode">Already have an account? Log In</a>
+            </div>
+            
+
+            </form>
+          </div>
+      </div>
+  </div>
+  
+  <div class="licence" [class.licence-dark]="isDarkMode">
+    <p>SafariZone is a very real, very hopeful project. It is NOT, however, a real website.</p>
+    <p>Any monetization strategy that may or may not seem real is only a showcase of functionality.</p>
+    <p><u>Safari Zone Inc.</u> All Rights Not Reserved</p>
+  </div>

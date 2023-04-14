@@ -1,0 +1,95 @@
+<!-- Choose how you want to search -->
+<div *ngIf="toggleSearch">
+    <div class="grey-overlap">
+        <div class="search-container">
+            <div class="search-head"[class.search-head-dark]="isDarkMode">
+                Search for Products
+                <button class="delete-button" (click)="showSearch()">Cancel</button>
+            </div>
+            <div class="search-card"[class.search-card-dark]="isDarkMode">
+                <div class="search-form"[class.search-form-dark]="isDarkMode">
+                    <select class="search-dropdown" name="searchType" [(ngModel)]="searchType" (change)="emptyCheckbox()">
+                        <option value="0">Select a Search Method</option>
+                        <option value="1">By Product ID</option>
+                        <option value="2">By Pokémon ID</option>
+                        <option value="3">By Pokémon Name</option>
+                        <option value="4">By Nickname</option>
+                        <option value="5">By Shiny</option>
+                    </select>
+                
+                    <span *ngIf="searchType != 0 && searchType != 1 && searchType != 5">
+                        <label class="shinycheck" for="shinySearch">Shiny Filter:
+                        <input type="checkbox" name="shinySearch" id="shinySearch" [(ngModel)]="shinySearch" (change)="checkbox()">
+                        <span class="checkmark"></span>
+                        </label>
+                    </span>
+    
+                    <!-- If searching by shiny, then this -->
+                    <div class="shiny-search" *ngIf="shinySearch">
+                        <div *ngIf="searchType != 0 && searchType != 5">
+                            <label class="btn">Shiny
+                            <input type="radio" name="shiny" id="shiny" [(ngModel)]="isShiny" value="true">
+                            <span class="bullet"></span>
+                            </label>
+                        
+                            <label class="btn">Regular
+                            <input type="radio" name="regular" id="regular" [(ngModel)]="isShiny" value="false">
+                            <span class="bullet"></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- If Product ID, then this -->
+                    <div *ngIf="searchType == 1">
+                        <form>
+                            <span>Product ID: </span>
+                            <input [(ngModel)]="productId" type="number" name="productId" placeholder="Product ID" min="1">
+                        </form>
+                    </div>
+                    
+                    <!-- If ID, then this -->
+                    <div *ngIf="searchType == 2">
+                        <form>
+                            <span>Pokémon ID: </span>
+                            <input [(ngModel)]="pokeId" type="number" name="pokeId" placeholder="Pokémon ID" min="1" max="151">
+                        </form>
+                    </div>
+                    
+                    <!-- If Name, then this -->
+                    <div *ngIf="searchType == 3">
+                        <form>
+                            <span>Pokémon Name: </span>
+                            <input [(ngModel)]="pokeName" type="text" name="pokeName" placeholder="Pokémon Name">
+                        </form>
+                    </div>
+                    
+                    <!-- If Nickname, then this -->
+                    <div *ngIf="searchType == 4">
+                        <form class="search-input">
+                            <span>Pokémon Nickname: </span>
+                            <input [(ngModel)]="pokeNickname" type="text" name="pokeNickname" placeholder="Nickname">
+                        </form>
+                    </div>
+                    
+                    <!-- If Shiny, then this -->
+                    <div *ngIf="searchType == 5">
+                        <label class="btn">Shiny
+                        <input type="radio" name="shiny" id="shiny" [(ngModel)]="isShiny" value="true">
+                        <span class="bullet"></span>
+                        </label>
+                    
+                        <label class="btn">Regular
+                        <input type="radio" name="regular" id="regular" [(ngModel)]="isShiny" value="false">
+                        <span class="bullet"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="search-button-container">
+                    <button class="search-form-button" (click)="search()">Search</button>
+                </div>
+                <div class="wrong" [class.wrong-dark]="isDarkMode" [innerText]="updateMessageVariable"></div>
+            </div>
+        </div>
+    </div>
+</div>

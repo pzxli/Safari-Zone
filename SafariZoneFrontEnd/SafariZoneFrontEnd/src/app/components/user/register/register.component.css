@@ -1,0 +1,335 @@
+.palette {
+    color: #74b65b;
+    color: #3f7041;
+    color: #ba7b36;
+    color: #fbe4b2;
+    color: #f2c284;
+    color: #fecd06;
+    color: #4a3218;
+    color: #675c62;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+   
+}
+
+.nav-container {
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 7;
+}
+
+.nav-bar {
+    background-color: #3f7041;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-item-list {
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+    margin: 0px;
+    padding-left: 0;
+}
+
+.nav-item {
+    list-style-type: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
+}
+
+.nav-button {
+    color: white;
+    border: none;
+    background: none;
+    font-size: 2vh;
+}
+
+.nav-button:hover {
+    cursor: pointer;
+    -webkit-filter: drop-shadow(0 0 4px rgb(255, 255, 255, .7));
+    filter: drop-shadow(0 0 4px rgb(255, 255, 255, .7));
+}
+
+.nav-button:active {
+    color: white;
+    transform: scale(.95);
+}
+
+.nav-logo{
+    margin: 8px;
+    margin-left: 12px;
+}
+
+.container{
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 7px solid blue; */
+    background: linear-gradient(140deg, #74b65b 40%, #fbe4b2 60%);
+}
+.leftSide{
+    /* border: 7px solid green; */
+    /* border: none; */
+    background-color: none;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.rightSide{
+    /* border: 7px solid red; */
+    /* border: none; */
+    background-color: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 50%;
+    bottom: 0;
+    align-items: center;
+}
+
+.logoContainer{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 950;
+}
+
+.logoContainer img{
+    width: 100%;
+    height: auto;
+    -webkit-filter: drop-shadow(0 0 6px rgb(0, 0, 0));
+    filter: drop-shadow(0 0 6px rgb(0, 0, 0));
+}
+.imagesContainer{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 950;
+    margin-left: 50px;
+}
+
+.image {
+    width: 55vw;
+}
+
+.registerBox{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30vw;
+    padding: 40px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 0;
+    box-sizing: border-box;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+    border: 7px solid #ba7b36;
+    border-radius: 10px;  
+    border-top: 40px solid #ba7b36;
+    z-index: 900;
+    background-color: #f8e9c8;
+    color: #4a3218;
+    font-family: poppins;
+    font-size: 15px;
+}
+
+.registerBox h2 {
+    margin: 0;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.registerBox .inputBox {
+    position: relative;
+}
+
+.registerBox .inputBox input {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid rgb(5, 5, 5);
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+    color: #4a3218;
+}
+
+.registerBox .inputBox label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    pointer-events: none;
+    transition: .25s;
+}
+
+.registerBox .inputBox input:focus ~ label,
+.registerBox .inputBox input:valid ~ label
+{
+    top: -16px;
+    left: 0;
+    color: #ba7b36;
+    font-size: 13px;
+}
+
+.registerFormBtns{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.linkContainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.registerBtn{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #ba7b36;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.registerBtn:hover {
+    background-color: #4a3218;
+    transition: 0.25s;
+}
+
+.licence {
+    background-color: #4a3218;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align:center;
+    margin: 0;
+    
+}
+.licence p {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-style: bold;
+}
+
+.message {
+    color: red;
+    margin-bottom: 15px;
+    font-size: bold;
+}
+
+.loginLink{
+    color: #ba7b36;
+    align-self: center;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* DARK MODE STYLING */
+
+.darktype-palette {
+    color: white;
+    color: #64905b; /* /desaturated green/ */
+    color: #535353; /* /light gray/ */
+    color: #2b2b2b; /* /gray */
+    color: #1b1b1b; /* /dark gray/ */
+    color: #203122; /* /dark green 1/ */
+    color: #152617; /* /dark green 2/ */
+    color: #102012;/*  /dark green 3/ */
+    color: #0d1c0f; /* /dark green 4/ */
+}
+
+.nav-bar-dark {
+    background-color: #102012;
+}
+
+.container-dark{
+    background: linear-gradient(140deg, #535353 40%, #203122 60%);
+}
+
+.quote-dark{
+    border: 1vh solid #102012;
+    background-color: #535353;
+    color: white;
+}
+
+.registerBox-dark{
+    background-color: #535353 ;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+    border: 7px solid #102012;
+    border-top: 40px solid #102012;
+    color: #fff;
+}
+
+.registerBox-dark .inputBox input {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: #FFF;
+}
+
+.registerBox-dark .inputBox input:focus ~ label,
+.registerBox-dark .inputBox input:valid ~ label
+{
+    color: #102012;
+}
+
+.registerBtn-dark{
+    color: #fff;
+    background-color: #102012;
+}
+
+.registerBtn-dark:hover {
+    background-color: #203122;
+}
+
+.loginLink-dark{
+    color: #102012;
+}
+
+.message-dark {
+    color: rgb(247, 128, 128);
+}
+
+.licence-dark {
+    background-color: #102012; 
+}

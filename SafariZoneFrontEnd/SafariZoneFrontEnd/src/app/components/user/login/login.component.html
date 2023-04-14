@@ -1,0 +1,73 @@
+<body>
+    <div class="nav-container">
+      <div class="nav-bar" [class.nav-bar-dark]="isDarkMode">
+          <img class="nav-logo" src="../../../../assets/images/PokeWhiteLogo.png">
+          <ul class="nav-item-list">
+              <li class="nav-item">
+                  <button class="nav-button" routerLink="/register">Register</button>
+              </li>
+              <li class="nav-item">
+                <button class="dark-type-button" [class.normal-type-button]="isDarkMode" (click)="toggleDarkMode()">{{darkModeString}}</button>
+            </li>
+          </ul>
+      </div>
+    </div>
+  
+    <div class="container" [class.container-dark]="isDarkMode">
+      <div class="leftSide">
+        <div class="slogan">
+            <h2>"Saving lives for just some Pokéchange"</h2>
+        </div>
+  
+        <div class="quote" [class.quote-dark]="isDarkMode">
+          <div class="quote-content" [class.quote-content-dark]="isDarkMode"></div>
+          <div class="toretto-container">
+            <p class="toretto">~ Dominic Toretto, Verified Customer</p>
+          </div>
+        </div>
+  
+      </div>
+  
+      <div class="rightSide">
+  
+        <div class="logoContainer">
+          <img class="logo" src="../../../../assets/images/Safari_Zone_Title (1).png">
+        </div>
+  
+        <div class="loginBox" [class.loginBox-dark]="isDarkMode">
+          <h2>Login</h2>
+
+          <form id="login-form" ngNativeValidate>
+            <div class="inputBox">
+              <input [(ngModel)]="username" type="text" name="username"  id="usernameInput" required>
+              <label for="usernameInput">Username</label>
+            </div>
+
+            <div class="inputBox">
+              <input [(ngModel)]="password" type="password" name="password"  id="passwordInput" required>
+              <label for="passwordInput">Password</label>
+            </div>
+
+            <div *ngIf="feedbackIsVisible" class="message" [class.message-dark]="isDarkMode">Invalid username or password</div>
+
+            <div class="loginFormBtns">
+              <input type="submit" name="" value="Log In" class="loginBtn" [class.loginBtn-dark]="isDarkMode" (click)="login()">
+              <input type="button" name="" value="Register" class="registerBtn" [class.registerBtn-dark]="isDarkMode" (click)="goToRegister()">
+            </div>
+          </form>
+        </div>
+        <div class="center-on-page">
+          <div class="pokeball" [class.pokeball-dark]="isDarkMode">
+            <div class="pokeball__button" [class.pokeball__button-dark]="isDarkMode"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  <div class="licence" [class.licence-dark]="isDarkMode">
+    <p>SafariZone is a very real, very hopeful project. It is NOT, however, a real website.</p>
+    <p>Any monetization strategy that may or may not seem real is only a showcase of functionality.</p>
+    <p> <u>Safari Zone Inc.</u> All Rights Not Reserved</p>
+  </div>
+  
+  

@@ -1,0 +1,179 @@
+.palette {
+    color: #74b65b;
+    color: #3f7041;
+    color: #ba7b36;
+    color: #fbe4b2;
+    color: #f2c284;
+    color: #fecd06;
+    color: #4a3218;
+    color: #675c62;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #fbe4b2;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+input, select, textarea {
+    color: rgb(64, 64, 117);
+}
+
+input::placeholder {
+    color: rgb(97, 97, 137);
+}
+
+.grey-overlap{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 7;
+}
+
+.main-container {
+    height: 95vh;
+    width: 84vw;
+    min-width: 630px;
+    margin-left: 16vw;
+    position: absolute;
+    top: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.edit-container{
+    border: none;
+    background-color: none;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+}
+
+.delete-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    position: relative;
+    top: 3vh;
+    right: 1vh;
+}
+
+.register-box{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30vw;
+    padding: 40px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-content: center;
+    margin-top: 0;
+    box-sizing: border-box;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+    border: 7px solid #3f7041;
+    border-radius: 10px;  
+    border-top: 40px solid #3f7041;
+    background-color: #f8e9c8;
+    color: #4a3218;
+    font-family: poppins;
+    font-size: 15px;
+}
+
+.register-box h2 {
+    margin: 0;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #3f7041;
+}
+
+.register-box .input-box {
+    position: relative;
+}
+
+.register-box .input-box input {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid rgb(5, 5, 5);
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+    color: #4a3218;
+}
+
+.register-box .input-box label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    pointer-events: none;
+    transition: .25s;
+}
+
+.register-box .input-box input:focus ~ label,
+.register-box .input-box input:valid ~ label
+{
+    top: -16px;
+    left: 0;
+    color: #ba7b36;
+    font-size: 13px;
+}
+
+.register-form-btns{
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.link-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.submit-button {
+    color: white;
+}
+
+/* ////////////////DARK MOE STYLING ///////////////////// */
+.register-box-dark{
+    background-color: #535353 ;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+    border: 7px solid #102012;
+    border-top: 40px solid #102012;
+    color: #fff;
+}
+
+.register-box-dark h2{
+    color: #fff;
+}
+
+.register-box-dark .input-box input {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: #FFF;
+}
+
+.register-box-dark .input-box input:focus ~ label,
+.register-box-dark .input-box input:valid ~ label
+{
+    color: #102012;
+}
+
+.message-dark {
+    color: rgb(247, 128, 128);
+}

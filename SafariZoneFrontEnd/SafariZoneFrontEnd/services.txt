@@ -1,0 +1,20 @@
+- UserService
+	- Login
+	- Register
+	- Logout
+
+- SessionService
+	- Check Session
+
+- ProductService
+	- Display
+	- Create
+	- Delete
+	- Search
+
+- OrderService
+	- Create
+	- Read
+	- Update
+	- Delete
+	- Submit

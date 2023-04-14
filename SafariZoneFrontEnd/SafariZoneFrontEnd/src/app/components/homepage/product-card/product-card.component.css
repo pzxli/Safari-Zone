@@ -1,0 +1,207 @@
+.palette {
+    color: #74b65b;
+    color: #3f7041;
+    color: #ba7b36;
+    color: #fbe4b2;
+    color: #f2c284;
+    color: #fecd06;
+    color: #4a3218;
+    color: #675c62;
+}
+
+.darktype-palette {
+    color: white;
+    color: #64905b; /* /desaturated green/ */
+    color: #535353; /* /light gray/ */
+    color: #2b2b2b; /* /gray */
+    color: #1b1b1b; /* /dark gray/ */
+    color: #203122; /* /dark green 1/ */
+    color: #152617; /* /dark green 2/ */
+    color: #102012;/*  /dark green 3/ */
+    color: #0d1c0f; /* /dark green 4/ */
+}
+
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+
+.card-container{
+    margin: 25px;
+    background-color: #3f7041;
+    height: 550px;
+    min-width: 350px;
+    width: 28%;
+    border-radius: 6px;
+    box-shadow: 3px 3px 10px #4a3218;
+    position: relative;
+}
+
+.card-container-dark{
+    background-color: #535353;
+    box-shadow: 3px 3px 10px black;
+}
+
+.divception{
+    display: flex;
+    justify-content: center;
+}
+
+.img-container{
+    background-color: rgb(255, 255, 255);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    height: 150px;
+    width: 250px;
+    display: inline-block;
+    border-radius: 6px;
+    justify-content: center;
+    display: flex;
+    z-index: 0;
+    position: relative;
+    border-radius: 10px;
+    
+}
+
+.bgimage{
+    border-radius: 10px;
+}
+
+.pokeImg{
+    z-index: 1;
+    position: absolute;
+}
+
+.info-container{
+    background-color: #74b65b;
+    padding-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 250px;
+    border-radius: 6px;
+}
+
+.info-container-dark{
+    background-color: #1b1b1b;
+    color: white;
+}
+
+
+.card-label{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 2.3vh;
+    background-color: #74b65b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.5vh;
+    padding: 8px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.card-label-dark{
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.card-label-shiny{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 2.3vh;
+    background: url(../../../../assets/images/shiny-label.png);
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.5vh;
+    padding: 8px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.card-label-shiny-dark{
+    background: url(../../../../assets/images/shiny-label-dark.png);
+    color: white;
+}
+
+.shiny-icon-container {
+    width: 100%;
+    position: relative;
+    bottom: 4.5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.poke-nickname{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 20pt;
+    text-align: center;
+    padding: 10px;
+}
+
+.stats{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+.adoption-price{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+
+.poke-description{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    background-color: rgba(229, 219, 219, 0.5);
+    height: 40px;
+    margin: 7px;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.poke-description-dark{
+    background-color: #535353
+}
+
+#description-text{
+    padding: 5px
+}
+
+
+.button-container{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.productId{
+    color: rgba(229, 219, 219, 0.5);
+    font-family: 'Ubuntu', sans-serif;
+    font-style: italic;
+    margin:5px;
+    left: 10px;
+    bottom: 5px;
+    position: absolute;
+    
+}
+
+#shiny{
+    font-size: 20pt;
+}
+
+.submit-button{
+
+    cursor: pointer;
+}

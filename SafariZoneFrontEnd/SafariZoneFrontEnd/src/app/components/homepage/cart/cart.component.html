@@ -1,0 +1,115 @@
+
+<div>
+    <div><h1 class="cart-title" [class.cart-title-dark]="isDarkMode">CART</h1></div>
+    <div class="product-container" [class.product-container-dark]="isDarkMode" *ngFor="let product of this.orderApiService.productsInCart">
+        <div class="product">
+            <div class="card-label" [class.card-label-dark]="isDarkMode">
+                <div id="name">{{product.pokemonName| titlecase}}</div>
+                <div id="shiny" *ngIf="product.shiny">✨</div>
+                <div id="pokemonId">{{product.pokemonId}}</div>
+            </div>
+            <div class="product-info">
+                <div class="img-container"  >
+                    <img *ngIf="product.shiny" src="../../../../assets/images/tinysprites/{{product.pokemonId}}.png"
+                    alt="ditto"  height="100%">  
+            
+                    <img *ngIf="!product.shiny" src="../../../../assets/images/tinysprites/{{product.pokemonId}}.png"
+                    alt="ditto" height="100%">  
+                </div>
+                <div class="info-container" [class.info-container-dark]="isDarkMode">
+                    <div class="poke-nickname">
+                        <div id="nickname">{{product.nickname}}</div>
+                    </div>
+            
+                    <div class="adoption-price">
+                    <div id="price">Price: <span>{{product.prodPrice | currency: 'USD'}}</span> </div>
+                    </div>
+                    
+                    <button class="delete-button" (click)="deleteButton($event)" value="{{product.productId}}">Remove from cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-container">
+    <div class="checkout-container" [class.checkout-container-dark]="isDarkMode">
+        <div [class.cart-total-dark]="isDarkMode">
+            <div class="total-text">Total : {{this.orderApiService.totalCost | currency : 'USD'}}</div>
+            <div class="button-container">
+                <app-checkout [isDarkMode]="isDarkMode"></app-checkout>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- <div class="cart-container">
+    <div><h1 id="cart-title">CART</h1></div>
+    <div class="product-container">
+        <div class="individual-product" *ngFor="let product of this.orderApiService.productsInCart">
+            <div class="product">
+                <div class="card-label">
+                    <div id="name">{{product.pokemonName}}</div>
+                    <div id="shiny" *ngIf="product.shiny">✨</div>
+                    <div id="pokemonId">{{product.pokemonId}}</div>
+                </div>
+          
+              <div class="img-container"  >
+                <img *ngIf="product.shiny" src="../../../../assets/images/tinysprites/{{product.pokemonId}}.png"
+                alt="ditto"  height="100%">  
+          
+               
+                  <img *ngIf="!product.shiny" src="../../../../assets/images/tinysprites/{{product.pokemonId}}.png" alt="ditto" height="100%">  
+          
+              </div>
+              
+              <div class="info-container"> -->
+          
+                 <!--  <div class="poke-nickname">
+                    <div id="nickname">{{product.nickname}}</div>
+                  </div>
+          
+                  <div class="adoption-price">
+                    <div id="price">Price: <div>{{product.prodPrice | currency: 'USD'}}</div> </div>
+                  </div>
+                  
+                  <button class="delete-button" (click)="deleteButton($event)" value="{{product.productId}}">Remove from cart</button> -->
+              <!-- </div> -->
+                <!-- <button class="delete-button">delete</button> -->
+<!--             </div>
+        </div> -->
+
+        <!-- <div class="individual-product">
+            <div class="product">
+                <app-product-card></app-product-card>
+                <button class="delete-button">delete</button>
+            </div>
+        </div>
+        <div class="individual-product">
+            <div class="product">
+                <app-product-card></app-product-card>
+                <button class="delete-button">delete</button>
+            </div>
+        </div> -->
+
+   <!--  </div>
+    <div id="cart-total">
+        <h3>Total :<span id="cart-total-literal">{{this.orderApiService.totalCost | currency : 'USD'}}</span></h3>
+        </div>
+        <div class="checkout">
+            <button class="checkout-button"><app-checkout></app-checkout></button>
+        </div>
+    </div>
+    <div class="checkout">
+        <button class="checkout-button"><app-checkout></app-checkout></button>
+    </div>
+
+</div>
+
+ -->
+

@@ -1,0 +1,135 @@
+<html [class.html-dark]="isDarkMode">
+    <div class="menu-container" [class.menu-container-dark]="isDarkMode">
+        <div class="menu-card">
+            <ul class="menu-item-list">
+                <li class="menu-item">
+                    <button class="menu-button" (click)="toggleEdit()">Edit User</button>
+                </li>
+            </ul>
+        </div>
+        <div class="menu-card-search">
+            <ul class="menu-item-list">
+                <li class="menu-item">
+                    <button class="menu-button" (click)="goToHome()">Dashboard</button>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="menu-footer">
+            <p class="footer-text">Safari Zone is a very real, very hopeful project. It is NOT, however, a real website. Any monetization strategy that may or amy not seem real is only a showcase of functionality.</p>
+        <br>
+            <p class="copyright-text"><u>Safari Zone Inc.</u> All rights not reserved.</p>
+        </div>
+    </div>
+
+    <div class="nav-container">
+        <div class="nav-bar" [class.nav-bar-dark]="isDarkMode">
+            <img class="nav-logo" src="../../../../assets/images/PokeWhiteLogo.png">
+            <ul class="nav-item-list">
+                <li class="nav-item">
+                    <button class="dark-type-button" [class.normal-type-button]="isDarkMode" (click)="toggleDarkMode()">{{darkModeString}}</button>
+                </li>
+                <li class="nav-item2">
+                    <button class="nav-button2" (click)="logout()" routerLink="/logout">Logout</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+<div class="main-container">
+
+    <div class="left-side-container">
+        <div class="user-container" [class.user-container-dark]="isDarkMode">
+            <div *ngIf="!lastProductIsEmpty" class="sprite-container">
+                <img class="pokeImg" *ngIf="lastProduct.shiny" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/{{lastProduct}}.png"
+                    alt="ditto"  height="100%">
+                <img class="pokeImg" *ngIf="!lastProduct.shiny" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{lastProduct}}.png"
+                    alt="ditto" height="100%">
+            </div>
+            <div class="current-view">
+                <div class="username-bar" [class.username-bar-dark]="isDarkMode">
+                    <div *ngIf="!userObjectIsEmpty" class="username-title">
+                        {{this.userApi.User.username}}
+                    </div>
+                </div>
+                <ul class="current-user-list">
+                    <li class="current-user-item">
+                        <div>Name:</div> 
+                        <div *ngIf="!userObjectIsEmpty">{{this.userApi.User.firstName}} {{this.userApi.User.lastName}}</div>
+                    </li>
+                    <li class="current-user-item">
+                        <div>Email:</div> 
+                        <div *ngIf="!userObjectIsEmpty">{{this.userApi.User.email}}</div>
+                    </li>
+                    <li class="current-user-item">
+                        <div>Address:</div> 
+                        <div *ngIf="!userObjectIsEmpty">{{this.userApi.User.shippingAddress}}</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pokeball-container">
+            <div class="pokeball">
+                <div class="pokeball__button"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-side-container">
+        <div class="history-header"[class.history-header-dark]="isDarkMode">
+            <div class="history-text">PAST ORDER HISTORY</div>
+        </div>
+        <div class="history-card" [class.history-card-dark]="isDarkMode">
+            <div class="user-history" *ngIf="!ifAdmin">
+                <div class="card-container" [class.card-container-dark]="isDarkMode" *ngFor="let order of orders.reverse()"> 
+                    <div id="order-id">Order Id: {{order.orderId}}</div>
+                    <div class="info-container" [class.info-container-dark]="isDarkMode" id="products" *ngFor="let product of order.cart.products"> 
+                        <div>
+                            <div>Product ID: {{product.productId}}</div>
+                            <div>Pokemon ID: {{product.pokemonId}}</div>
+                            <div>Pokemon Name: {{product.pokemonName}}</div>
+                            <div>Pokemon Nickname: {{product.nickname}}</div>
+                            <div>Pokemon Price: {{product.prodPrice | currency : 'USD'}}</div>
+                        </div>
+                        <div class="img-container">
+                            <img src="../../../../assets/images/tinysprites/{{product.pokemonId}}.png"
+                            alt="ditto"  height="100%">  
+                        </div>
+                    </div>
+                    <div class="poke-description" [class.poke-description-dark]="isDarkMode">
+                        <div>Total: {{order.cart.total | currency : 'USD'}}</div>
+                        <div id="date-submitted">Submitted: {{order.timeSubmitted | date : 'short'}} </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-history" *ngIf="ifAdmin">
+                <div class="card-container" [class.card-container-dark]="isDarkMode" *ngFor="let order of allOrders.reverse()"> 
+                    <div id="order-id">Order Id: {{order.orderId}}</div>
+                    <div id="order-nameofuser">Name: {{order.user.firstName | titlecase}} {{order.user.lastName | titlecase}}</div>
+                    <div class="info-container" [class.info-container-dark]="isDarkMode" id="products" *ngFor="let product of order.cart.products"> 
+                        <div>
+                            <div>Product ID: {{product.productId}}</div>
+                            <div>Pokemon ID: {{product.pokemonId}}</div>
+                            <div>Pokemon Name: {{product.pokemonName}}</div>
+                            <div>Pokemon Nickname: {{product.nickname}}</div>
+                            <div>Pokemon Price: {{product.prodPrice | currency : 'USD'}}</div>
+                        </div>
+                        <div class="img-container">
+                            <img src="../../../../assets/images/tinysprites/{{product.pokemonId}}.png"
+                            alt="ditto"  height="100%">  
+                        </div>
+                    </div>
+                    <div class="poke-description" [class.poke-description-dark]="isDarkMode">
+                        <div>Total: {{order.cart.total | currency : 'USD'}}</div>
+                        <div id="date-submitted">Submitted: {{order.timeSubmitted | date : 'short'}} </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <app-user-info [isDarkMode]="isDarkMode"></app-user-info>
+</div>

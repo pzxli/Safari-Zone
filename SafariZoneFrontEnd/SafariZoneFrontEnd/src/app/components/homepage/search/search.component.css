@@ -1,0 +1,278 @@
+.palette {
+  color: #74b65b;
+  color: #3f7041;
+  color: #ba7b36;
+  color: #fbe4b2;
+  color: #f2c284;
+  color: #fecd06;
+  color: #4a3218;
+  color: #675c62;
+}
+
+
+.darktype-palette {
+  color: white;
+  color: #64905b; /* /desaturated green/ */
+  color: #535353; /* /light gray/ */
+  color: #2b2b2b; /* /gray */
+  color: #1b1b1b; /* /dark gray/ */
+  color: #203122; /* /dark green 1/ */
+  color: #152617; /* /dark green 2/ */
+  color: #102012;/*  /dark green 3/ */
+  color: #0d1c0f; /* /dark green 4/ */
+}
+
+/* overall styling for the search function */
+input, select, textarea {
+    color: rgb(64, 64, 117);
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.grey-overlap{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 7;
+}
+
+.search-container{
+    display: flex;
+    flex-direction: column;
+    margin: 12vh;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.search-head{
+    background-color: #3f7041;
+    color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 3vh;
+    padding: 1vh;
+    font-size: 2.5vh;
+    display: flex;
+    justify-content: space-between;
+    min-width: 250px;
+}
+
+.search-head-dark{
+  background-color: #1b1b1b;
+}
+
+.search-card{
+    background-color: #fbe4b2;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 4px 10px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 250px;
+}
+
+.search-card-dark{
+  background-color: #474747;
+}
+
+.search-form{
+    background-color: #dac290;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.7vh;
+    min-width: 205px;
+    padding: 2vh;
+}
+
+.search-form-dark{
+  background-color: #1b1b1b;
+  color: white;
+}
+
+.search-dropdown{
+    width: 40%;
+    height: 5vh;
+    border-color: #d8d293;
+    border-radius: 6px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.search-dropdown:focus {
+    box-shadow: 0 0 8px rgb(0, 200, 255);
+}
+
+.shiny-search{
+    margin-bottom: 2vh;
+}
+
+.search-button-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* stylize the look of search button */
+.search-form-button{
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    margin-top: 8px;
+    background-color: #e0b507;
+    color: white;
+    font-size: 2vh;
+    padding: 1vh;
+    width: 25%;
+    min-width: 86px;
+}
+
+.search-form-button:hover{
+    cursor: pointer;
+    background-color: #f0c61c;
+}
+
+/* The container */
+.shinycheck {
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .shinycheck input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 25%;
+    right: -17.5%;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(200, 243, 200);
+  }
+  
+  /* On mouse-over, change color */
+  .shinycheck:hover input ~ .checkmark {
+    background-color: rgb(94, 223, 94);
+  }
+  
+  /* When the checkbox is checked, change color */
+  .shinycheck input:checked ~ .checkmark {
+    background-color: #3f7041;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .shinycheck input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .shinycheck .checkmark:after {
+    left: 3.5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid rgb(94, 223, 94);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+/* The container */
+.btn {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .btn input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .bullet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: rgb(200, 243, 200);
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, change color */
+  .btn:hover input ~ .bullet {
+    background-color: rgb(94, 223, 94);
+  }
+  
+  /* When the radio button is checked, change color */
+  .btn input:checked ~ .bullet {
+    background-color: #3f7041;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .bullet:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .btn input:checked ~ .bullet:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .btn .bullet:after {
+      top: 6px;
+      left: 6px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgb(94, 223, 94);
+  }
+
+  .wrong{
+    padding: 5px;
+    color: red;
+  }
+
+  .wrong-dark {
+    padding: 5px;
+    color: rgb(247, 128, 128);
+  }

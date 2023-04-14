@@ -1,0 +1,49 @@
+<div class="cards">
+  <div class="card-container" *ngFor="let product of productapiService.allProducts" [class.card-container-dark]="isDarkMode">
+    <div class="card-label-shiny" *ngIf="product.shiny" [class.card-label-shiny-dark]="isDarkMode">
+      <div id="name">{{product.pokemonName | titlecase}}</div>
+      <div id="pokemonId">{{product.pokemonId}}</div>
+    </div>
+    <div class="card-label" *ngIf="!product.shiny" [class.card-label-dark]="isDarkMode">
+      <div id="name">{{product.pokemonName | titlecase}}</div>
+      <div id="pokemonId">{{product.pokemonId}}</div>
+    </div>
+      <div class="divception">
+        <div class="img-container"  >
+          <img class="bgimage" *ngIf="isDarkMode" src="../../../../assets/images/productbackground-dark.png">
+          <img class="bgimage" *ngIf="!isDarkMode" src="../../../../assets/images/productbackground.png">
+          <img class="pokeImg" *ngIf="product.shiny" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/{{product.pokemonId}}.png"
+          alt="ditto"  height="100%">  
+          <img class="pokeImg" *ngIf="!product.shiny" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{product.pokemonId}}.png"
+          alt="ditto" height="100%">  
+        </div>
+      </div>
+      <div class="info-container" [class.info-container-dark]="isDarkMode">
+          <div class="poke-nickname">
+            <div id="nickname">{{product.nickname}}</div>
+          </div>
+
+          <div class="stats" > 
+            <div id="height">Height: {{product.prodHeight}} </div>
+            <div id="weight">Weight: {{product.prodWeight}} </div>
+          </div>
+          
+          <div class="poke-description"  [class.poke-description-dark]="isDarkMode">
+          <div id="description">Description:<div id="description-text">{{product.description}}</div> </div>
+          </div>
+
+          <div class="adoption-price">
+            <div id="price">Price: <div>${{product.prodPrice}}</div> </div>
+          </div>
+
+  
+          <div class="button-container" *ngIf="!this.productapiService.productsInCart.includes(product.productId)">
+            <button class="submit-button" (click)="addToCart($event)" value="{{product.productId}}">Add To Cart</button>
+          </div>
+          
+      </div>
+      <div class="productId">
+        <div id="productId">Product ID: {{product.productId}}</div>
+      </div>
+  </div>
+</div>

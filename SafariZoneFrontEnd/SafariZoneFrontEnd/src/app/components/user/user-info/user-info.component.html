@@ -1,0 +1,45 @@
+<div *ngIf="editBox">
+    <div class="grey-overlap">
+        <div class="main-container">
+            <div class="edit-container">
+                <div class="delete-container">
+                    <div class="delete-button" (click)="toggleEdit()">X</div>
+                </div>
+                <div class="register-box" [class.register-box-dark]="isDarkMode">
+                    <h2>Edit Info</h2>
+                    <form id="register-form" ngNativeValidate>
+                        <div class="input-box">
+                            <input [(ngModel)]="username" type="text" name="username" required id="usernameInput">
+                            <label for="usernameInput">Username</label>
+                        </div>
+                        <div class="input-box">
+                            <input [(ngModel)]="password" type="password" name="password" required id="passwordInput">
+                            <label for="passwordInput">Password</label>
+                        </div>
+                        <div class="input-box">
+                            <input [(ngModel)]="firstname" type="text" name="firstname" required id="fistnameInput">
+                            <label for="firstnameInput">First Name</label>
+                        </div>
+                        <div class="input-box">
+                            <input [(ngModel)]="lastname" type="text" name="lastname" required id="lastnameInput">
+                            <label for="lastnameInput">Last Name</label>
+                        </div>
+                        <div class="input-box">
+                            <input [(ngModel)]="email" type="text" name="email" required id="emailInput">
+                            <label for="emailInput">Email Address</label>
+                        </div>
+                        <div class="input-box">
+                            <input [(ngModel)]="shipping" type="text" name="shipping" required id="addressInput">
+                            <label for="addressInput">Shipping Address</label>
+                        </div>
+                        <div *ngIf="feedbackIsVisible" class="message" >Username or Email already taken</div>
+                        <div class="register-form-btns">
+                            <input (click)="edit()" type="submit" name="" value="Save Changes" class="submit-button">
+                            <button class="delete-button" (click)="toggleEdit()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

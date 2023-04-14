@@ -1,0 +1,35 @@
+- Global Components
+	- Navbar
+	- Background Color
+	- Font Families
+	- Element Classes/Designs
+
+- Login
+- Register
+
+- Home Page
+	- (if Admin) Create Product
+	- (if Admin) Delete Product
+	- Display All Products
+
+- Search Products (child of Home Page)
+	- Search Bar
+	- Results Container
+
+- Cart (child of Home Page)
+	- Products to Buy
+	- Remove Item From Cart
+	- Clear Cart
+	- Total
+	- (if Submitted) Checkout
+		- Submitted Cart
+		- Total
+		- (current User) Profile Info
+		- Purchase Button
+
+- Orders Page
+	- (if Admin) 
+		- All Past Orders
+	- (if User) 
+		- (current User) Profile Info
+		- (current User) All Personal Orders

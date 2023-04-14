@@ -1,0 +1,75 @@
+<html class="html" [class.html-dark]="isDarkMode">
+<div class="nav-container">
+    <div class="nav-bar" [class.nav-bar-dark]="isDarkMode">
+        <img class="nav-logo" src="../../../../assets/images/PokeWhiteLogo.png">
+        <ul class="nav-item-list">
+            <li class="nav-item">
+                <button class="dark-type-button" [class.normal-type-button]="isDarkMode" (click)="toggleDarkMode()" >{{darkModeString}}</button>
+            </li>
+            <li class="nav-item2">
+                <button class="nav-button2" (click)="logout()" routerLink="/logout">Logout</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="menu-container" [class.menu-container-dark]="isDarkMode">
+    <div class="menu-card">
+        <ul class="menu-item-list">
+            <li class="menu-item">
+                <button class="menu-button" (click)="goToHistory()">History</button>
+            </li>
+            <li class="menu-item">
+                <button *ngIf="canCreate" class="menu-button" (click)="toggleCreate()">Create</button>
+            </li>
+        </ul>
+    </div>
+    <div class="menu-card-search">
+        <ul class="menu-item-list">
+            <li class="menu-item">
+                <button class="menu-button" (click)="toggleSearch()">Search</button>
+            </li>
+            <li class="menu-item">
+                <button *ngIf="productApi.isSearching" class="menu-button" (click)="clearSearch()">Clear</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="menu-footer">
+        <p class="footer-text">Safari Zone is a very real, very hopeful project. It is NOT, however, a real website. Any monetization strategy that may or amy not seem real is only a showcase of functionality.</p>
+    <br>
+        <p class="copyright-text"><u>Safari Zone Inc.</u> All rights not reserved.</p>
+    </div>
+</div>
+
+<div class="main-container">
+    <div class="main-header-bar" [class.main-header-bar-dark]="isDarkMode">YOU FOUND THE EASTER EGG</div>
+    <div class="main-header" [class.main-header-dark]="isDarkMode">
+        <div class="center-container">
+            <img class="transparent-pokeball" src="../../../../assets/images/poketransparent3.png">
+            <div class="header-text-container">
+                <div class="header-text">Meet your new family!</div>
+            </div>
+        </div>
+        <div class="portrait-container">
+            <img class="portraits" src="../../../../assets/images/pokemon_portraits2.png">
+            <img class="main-header-logo" src="../../../../assets/images/Safari_Zone_Title (1).png">
+        </div>
+    </div>
+    <div class="product-container">
+        <app-product-card [isDarkMode]="isDarkMode"></app-product-card>
+    </div>
+</div>
+
+<div class="right-container">
+    <div class="cart-container" [class.cart-container-dark]="isDarkMode">
+        <app-cart [isDarkMode]="isDarkMode"></app-cart>
+    </div>
+</div>
+
+<div>
+    <app-search [isDarkMode]="isDarkMode"></app-search>
+    <app-create-product [isDarkMode]="isDarkMode"></app-create-product>
+</div>
+
+</html>

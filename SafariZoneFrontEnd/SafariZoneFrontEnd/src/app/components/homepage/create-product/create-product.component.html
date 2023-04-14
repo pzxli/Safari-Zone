@@ -1,0 +1,135 @@
+<!-- <div class="container center">
+    <form>
+        <div id="title">Create Your New Adoption Listing!!</div>
+
+        <div>
+            Pokemon Id:
+            <select name= "spieces-name">
+                <option value="speice1">Specie1</option>
+                <option value="speice2">Specie2</option>
+                <option value="speice3">Specie3</option>
+            </select> 
+        </div>
+        <div>
+            Weight:
+            <input type="text" placeholder="Name" [(ngModel)]="newProd.pokemonName" id="PokemonName" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+            Height:
+            <input type="text" placeholder="Height" [(ngModel)]="newProdHeight" id="prodHeight"[ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+            State:
+            <input type="text" placeholder="State" [(ngModel)]="newProfile.state" id="state" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+            About You:
+            <textarea rows="20" cols="50" [(ngModel)]="newProfile.aboutMe" id="aboutMe" [ngModelOptions]="{standalone: true}"></textarea>
+        </div>
+        <div *ngIf="this.errorM">{{this.errorM}}</div>
+        <button class = "prof-create" (click)="createProfile()" id="createButtn">Create Profile</button>
+    </form>
+</div>
+
+-->
+
+<div *ngIf="createBox">
+    <div class="grey-overlap">
+        <div class="create-container">
+            <div class="create-head"[class.create-head-dark]="isDarkMode" >
+                Create a new listing
+                <button class="delete-button" (click)="toggleCreate()">Cancel</button>
+            </div>
+            <div class="create-card" [class.create-card-dark]="isDarkMode">
+                <div class="sprite-container">
+                    <img class ="pokemon-sprite" *ngIf="shiny.value == 'false'" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{createdropdown.value}}.png">
+                    <img class ="pokemon-sprite" *ngIf="shiny.value == 'true'" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/{{createdropdown.value}}.png">
+                </div>
+                <form class="create-form" [class.create-form-dark]="isDarkMode">
+                    <select #createdropdown class="create-dropdown" name= "species" (change)="getOnePokemonById(createdropdown.value)" [(ngModel)]="defaultPokemon">
+                        <option *ngFor="let pokemonDropdown of filteredList; let i = index" class="dropdown-item" value="{{i+1}}">{{i+1}}. {{pokemonDropdown.name | titlecase}}</option>
+                    </select>
+                    
+                    <!-- filtering works, selecting does not -->
+                    <!-- <input name="filtering" type="text" [(ngModel)]="filterInput"> -->
+
+                    <label class="input-label">
+                        Nickname
+                    <input
+                        [(ngModel)]="product.nickname"
+                        class="create-input" 
+                        type="text"  
+                        name="pokemonNickName" 
+                        placeholder="Nickname..." 
+                        required>
+                        </label>
+
+                    <div class="short-container">
+                        <label class="input-label">
+                            Height
+                        <input
+                            [(ngModel)]="product.prodHeight"
+                            class="create-input-short" 
+                            type="number"  
+                            name="pokemonHeight" 
+                            [placeholder]="(this.height)" 
+                            required
+                            min="1">
+                        </label>
+
+                        <label class="input-label">
+                            Weight
+                        <input
+                            [(ngModel)]="product.prodWeight"
+                            class="create-input-short" 
+                            type="number"  
+                            name="pokemonWeight" 
+                            [placeholder]="(this.weight)" 
+                            required
+                            min="1">
+                        </label>
+                    </div>
+
+                    <div class="short-container">
+                        <label class="input-label">
+                            Price(USD)
+                        <input
+                            [(ngModel)]="product.prodPrice"
+                            class="create-input-short" 
+                            type="number"  
+                            name="pokemonPrice" 
+                            placeholder="Price..." 
+                            required
+                            min="1">
+                        </label>
+
+                        <label class="input-label-shiny">
+                            Shiny:
+                        <select #shiny class="create-dropdown-shiny" name= "shiny" [(ngModel)]="productShiny">
+                            <option value="false">Normal</option>
+                            <option value="true">Shiny</option>
+                        </select>
+                        </label>
+
+                    </div>
+
+                    <label class="input-label-description">
+                        Description
+                    <textarea
+                        [(ngModel)]="product.description"
+                        class="create-textarea" 
+                        type="text"  
+                        name="pokemonDescription" 
+                        placeholder="Description..." 
+                        required></textarea>
+                    </label>
+                </form>
+
+                <div class="create-button-container">
+                    <button class="create-form-button" (click)="createProduct(createdropdown.value)">Submit</button>
+                </div>
+                <div class="wrong" [class.wrong-dark]="isDarkMode" [innerText]="updateMessageVariable"></div>
+            </div>
+        </div>
+    </div>
+</div>
