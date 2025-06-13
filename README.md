@@ -18,16 +18,21 @@
 
 <!-- Add your screenshots in the docs/screenshots folder and update paths below -->
 
-Homepage - Login ![loginPage](https://github.com/user-attachments/assets/9c382eb7-8831-4226-9f90-c81649578cfc)
-Homepage - Register ![registerPage](https://github.com/user-attachments/assets/e59d2a07-1eff-46f3-bc67-33f21460562c)
+Homepage - Login ![loginPage](https://github.com/user-attachments/assets/15e830ad-e5d2-4173-94d5-1e7aad434184)
+
+
+Homepage - Register ![registerPage](https://github.com/user-attachments/assets/d5394ca0-9d78-44d7-8736-69c918a43371)
+
 
 *Homepage showcasing Login/Register functionality.*
 
-Dark mode ![DarkMode](https://github.com/user-attachments/assets/ae2b46e5-b40b-4aec-ad3f-75a6aeac9b37) 
+Dark mode ![DarkMode](https://github.com/user-attachments/assets/c0c91d9d-9f86-4994-b59a-8f7663142bf8)
+
 
 *Toggled dark mode*
 
-Product View ![CartPage](https://github.com/user-attachments/assets/d19099f4-4e7c-459b-a6a3-c7b4d34e05f4)
+Product View ![CartPage](https://github.com/user-attachments/assets/4cd7cbc1-47fe-4188-8218-9a6b5bb0f035)
+
 
 *Detailed product view with description and add-to-cart functionality.*
 
