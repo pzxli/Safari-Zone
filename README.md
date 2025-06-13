@@ -19,15 +19,15 @@
 <!-- Add your screenshots in the docs/screenshots folder and update paths below -->
 *Homepage showcasing Login/Register functionality.*
 
-Homepage - Login ![loginPage](https://github.com/user-attachments/assets/15e830ad-e5d2-4173-94d5-1e7aad434184)
+Login ![loginPage](https://github.com/user-attachments/assets/15e830ad-e5d2-4173-94d5-1e7aad434184)
 
 
-Homepage - Register ![registerPage](https://github.com/user-attachments/assets/d5394ca0-9d78-44d7-8736-69c918a43371)
+Register ![registerPage](https://github.com/user-attachments/assets/d5394ca0-9d78-44d7-8736-69c918a43371)
 
 
 *Toggled dark mode*
 
-Dark mode ![DarkMode](https://github.com/user-attachments/assets/c0c91d9d-9f86-4994-b59a-8f7663142bf8)
+![DarkMode](https://github.com/user-attachments/assets/c0c91d9d-9f86-4994-b59a-8f7663142bf8)
 
 
 
