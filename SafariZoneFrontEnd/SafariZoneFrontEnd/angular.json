@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "SafariZoneFrontEnd"
+  "defaultProject": "SafariZoneFrontEnd",
+  "cli": {
+    "analytics": false
+  }
 }
