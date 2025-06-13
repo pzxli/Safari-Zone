@@ -18,7 +18,8 @@
 
 <!-- Add your screenshots in the docs/screenshots folder and update paths below -->
 
-Home Page ![loginPage](https://github.com/user-attachments/assets/9c382eb7-8831-4226-9f90-c81649578cfc)![registerPage](https://github.com/user-attachments/assets/e59d2a07-1eff-46f3-bc67-33f21460562c)
+Homepage - Login ![loginPage](https://github.com/user-attachments/assets/9c382eb7-8831-4226-9f90-c81649578cfc)
+Homepage - Register ![registerPage](https://github.com/user-attachments/assets/e59d2a07-1eff-46f3-bc67-33f21460562c)
 
 )  
 *Homepage showcasing Login/Register functionality.*
