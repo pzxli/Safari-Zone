@@ -1,16 +1,35 @@
 # Safari-Zone
 
-**Safari-Zone** is a modern e-commerce web application built with Angular, designed to provide a seamless and engaging shopping experience for users.
+**Safari-Zone** is a modern e-commerce web application featuring a responsive Angular frontend and a Java-based backend built with Spring boot. The project delivers a seamless shopping experience from user login to checkout, and showcases full-stack development with industry-standard tools.
+
+---
+
+## Tech Stack
+
+### 🖥️ Frontend
+
+- **Angular 13**
+- **TypeScript**
+- **Node.js**
+- Responsive UI with Angular Material and custom components
+
+### ⚙️ Backend
+
+- **Spring Boot**
+- **Hibernate / JPA**
+- **Maven**
+- **Lombok**
+- **PostgreSQL**
 
 ---
 
 ## Features
 
-- Browse and search products effortlessly  
-- Responsive design for all devices  
-- Smooth user interface with Angular components  
-- Easy navigation and filtering  
-- Built with Angular 13 and TypeScript  
+- User authentication (Login/Register)
+- Product browsing with detailed views  
+- Add-to-cart functionality
+- Light/Dark mode toggle
+- Fully responsive design for mobile and desktop 
 
 ---
 
